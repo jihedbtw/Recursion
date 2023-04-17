@@ -1,0 +1,14 @@
+ALGORITHM recursion
+
+FUNCTION isPalindrome(str: STRING) : BOOLEAN
+VAR
+    l : INTEGER := str.length;
+    result :BOOLEAN := true;
+BEGIN
+    FOR i FROM 0 TO l/2 DO
+        IF (str[i] <> str[l-1-i]) THEN
+            result := false;
+        END_IF
+    END_FOR
+    RETURN result ;
+END
